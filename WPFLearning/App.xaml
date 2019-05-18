@@ -4,6 +4,62 @@
              xmlns:local="clr-namespace:WPFLearning"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Text Box Style -->
+        <Style x:Key="StandardTextBox">
+            <Setter Property="Control.Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="0" Direction="0" Opacity=".25" />
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Control.FontSize" Value="12" />
+            <Setter Property="Control.BorderThickness" Value="1"/>
+            <Setter Property="Control.BorderBrush" Value="#DAD7D7" />
+            <Setter Property="Control.Foreground" Value="#2B2B2B" />
+        </Style>
+
+        <!-- Button Style -->
+        <Style x:Key="StandardBtn">
+            
+        </Style>
+
+        <!-- Navigation Button Style -->
+        <Style x:Key="NavigationBtn" TargetType="Button">
+            <Setter Property="Control.FontSize" Value="13" />
+            <Setter Property="Control.FontWeight" Value="Bold" />
+            <Setter Property="Control.HorizontalContentAlignment" Value="left" />
+            <Setter Property="Control.FontFamily" Value="Tahoma" />
+            <Setter Property="Control.Foreground" Value="#EFEEEE" />
+            <Setter Property="Control.Padding" Value="50,0,0,0" />
+            <Setter Property="Control.Background" Value="#2B2B2B" />
+            <Setter Property="Control.Width" Value="200" />
+            <Setter Property="Control.Height" Value="34" />
+            <Setter Property="Control.BorderThickness" Value="0" />
+            <Setter Property="Control.HorizontalAlignment" Value="Left" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Left" Margin="50,0,0,0" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.Background" Value="#0261CC" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Nav Button Icons -->
+        <BitmapImage x:Key="logo" UriSource="Images/logo.PNG" />
+        <BitmapImage x:Key="homeIcon" UriSource="Images/homeIcon.png" />
+        <BitmapImage x:Key="carIcon" UriSource="Images/carIcon.png" />
+        <BitmapImage x:Key="reportsIcon" UriSource="Images/reportsIcon.png" />
+        <BitmapImage x:Key="pageIcon" UriSource="Images/pageIcon.png" />
+        <BitmapImage x:Key="folderIcon" UriSource="Images/folderIcon.png" />
+        <BitmapImage x:Key="userIcon" UriSource="Images/userIcon.png" />
+        <BitmapImage x:Key="repairIcon" UriSource="Images/repairIcon.png" />
+        <BitmapImage x:Key="scheduleIcon" UriSource="Images/scheduleIcon.png" />
     </Application.Resources>
 </Application>

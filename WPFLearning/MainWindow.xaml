@@ -5,8 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFLearning"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="568.487" Width="978.992">
+
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="Auto" Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Rectangles used for background coloring -->
+        <Rectangle Grid.Column="0" Height="Auto" Fill="#2B2B2B" />
+        <Rectangle Grid.Column="1" Height="Auto" Fill="#E9E9E9" />
+
+        <!-- Logo Image -->
+        <Image Grid.Column="0"
+               Panel.ZIndex="1000"
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               Width="Auto"
+               Height="Auto"
+               Source="{StaticResource logo}" />
+
+        <!-- Navigation Buttons-->
+        <Image Grid.Column="0" Panel.ZIndex="100" HorizontalAlignment="Left" Height="24" Margin="10,63,0,0" VerticalAlignment="Top" Width="24" Source="{DynamicResource homeIcon}" RenderTransformOrigin="-1.263,-2.314"/>
+        <Button Content="Home"
+                Grid.Column="0" 
+                Margin="0,57,0,0" 
+                VerticalAlignment="Top" 
+                Style="{DynamicResource NavigationBtn}"/>
+
+        <Button Content="Vehicle Manager" 
+                Grid.Column="0"  
+                Margin="0,91,0,0" 
+                VerticalAlignment="Top" 
+                Style="{DynamicResource NavigationBtn}"/>
+
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="91,101,-211,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Style="{DynamicResource StandardTextBox}" />
+        <Button Content="Home Repairs" 
+            Grid.Column="0" 
+            Margin="0,127,0,0" 
+            VerticalAlignment="Top" 
+            Style="{DynamicResource NavigationBtn}"/>
+
+        <Button Content="Schedule" 
+            Grid.Column="0" 
+            Margin="0,162,0,0" 
+            VerticalAlignment="Top" 
+            Style="{DynamicResource NavigationBtn}"/>
+
+        <Button Content="Reports" 
+            Grid.Column="0" 
+            Margin="0,197,0,0" 
+            VerticalAlignment="Top" 
+            Style="{DynamicResource NavigationBtn}"/>
+
+        <Button Content="Users" 
+            Grid.Column="0" 
+            Margin="0,232,0,0" 
+            VerticalAlignment="Top" 
+            Style="{DynamicResource NavigationBtn}"/>
+        <Image Grid.Column="0" Panel.ZIndex="100" HorizontalAlignment="Left" Height="24" Margin="10,96,0,0" VerticalAlignment="Top" Width="24" Source="{DynamicResource carIcon}" RenderTransformOrigin="-1.263,-2.314"/>
+        <Image Grid.Column="0" Panel.ZIndex="100" HorizontalAlignment="Left" Height="24" Margin="10,133,0,0" VerticalAlignment="Top" Width="24" Source="{DynamicResource repairIcon}" RenderTransformOrigin="-1.263,-2.314"/>
+        <Image Grid.Column="0" Panel.ZIndex="100" HorizontalAlignment="Left" Height="24" Margin="10,168,0,0" VerticalAlignment="Top" Width="24" Source="{DynamicResource scheduleIcon}" RenderTransformOrigin="-1.263,-2.314"/>
+        <Image Grid.Column="0" Panel.ZIndex="100" HorizontalAlignment="Left" Height="24" Margin="10,204,0,0" VerticalAlignment="Top" Width="24" Source="{DynamicResource reportsIcon}" RenderTransformOrigin="-1.263,-2.314"/>
+        <Image Grid.Column="0" Panel.ZIndex="100" HorizontalAlignment="Left" Height="24" Margin="10,238,0,0" VerticalAlignment="Top" Width="24" Source="{DynamicResource userIcon}" RenderTransformOrigin="-1.263,-2.314"/>
+
+
     </Grid>
+
 </Window>
